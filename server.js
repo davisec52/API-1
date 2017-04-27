@@ -60,6 +60,6 @@ app.get("/:stampID", datecheck, function(req, res){
 			}
 		}		
 	}).send(answer);
-}).listen(8080, function(){
+}).listen(process.env.PORT, process.env.IP, function(){
 	console.log("stampID server listening...");
 });
