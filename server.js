@@ -2,6 +2,9 @@ var http = require("http");
 var express = require("express");
 var app = express();
 
+app.set("view options", {layout: false})
+app.use(express.static(__dirname + '/public'));
+
 function timeToTime(timeExp){
 	var num = parseInt(timeExp);
 	
@@ -47,7 +50,15 @@ var datecheck = function(req, res, next){
 	}
 }
 
-//app.use(datecheck);
+app.get("/", function(req, res, next){
+	res.status(200, function(err){
+		if(err){
+			console.log(err);
+		} else {
+			next();
+		}
+	}).render("index");
+});
 
 app.get("/:stampID", datecheck, function(req, res){
 	var answer = timeToTime(req.params.stampID);
