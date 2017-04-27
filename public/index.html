@@ -14,17 +14,16 @@
             <h1 class="header">
                 FCC First API Challenge: Timestamp Microservice
             </h1>
-            <blockquote class="well">
-                Objectives:
-                <ul>
-                	<li>User can pass a string to verify whether or not that string is a valid unix timestamp
-                or a date in natural language format. For example, December 31, 1970, or dec 31 70.</li>
+           <blockquote>
+            <h3>Examples</h3>
+            <p style="font-size:20px">Enter string into the URL address bar following the models below.</p>
+            <ul>
+                	<li> Verify whether or not a string is a valid unix timestamp or a date in natural language format
+                 		by appending it to the end of the URL in the address bar above. String examples include, December 31 1970,
+                 		or dec 31 70.</li>
                 	<li> If the string is valid, the app returns both the Unix timestamp and the natural language format.</li>
                 	<li> If the string is not valid, the app returns null for both the unix and natrural language properties.</li>
                 </ul>
-            </blockquote>
-            <h3>Examples</h3>
-            <p style="font-size:20px">Enter string into the URL address bar following the models below.</p>
             <code>https://still-shore-32119.herokuapp.com//july 4 2011</code><br>
             <code>https://still-shore-32119.herokuapp.com//1309737600</code>
             <h3>Expected output:</h3>
@@ -34,6 +33,7 @@
                   "natural": "July 4, 2011"
                 }
             </code>
+            </blockquote>
         </div>
     </body>
 </html>
